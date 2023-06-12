@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std; 
+int main()
+{
+   int number, a, b, c, reverse ;
+   cout << "Please enter a three digit number: " ; 
+   cin >> number; 
+
+   a = number % 10 ;
+   number = number/10 ; 
+   b = number % 10 ; 
+   number = number / 10 ;
+   c =  number % 10 ;
+   reverse = a*100 + b*10 + c*1 ; 
+
+   cout << " The reversed number is " << reverse << endl ;
+
+   return 0; 
+
+
+
+}
