@@ -1,0 +1,29 @@
+#include<iostream> 
+using namespace std;
+int main ()
+{
+    int accountbalance ; 
+    double balance ; 
+    double balanceoverthousand;
+    double intrest= 0.015 ; 
+    double additonalintrest ; 
+    cout << " Enter yout account balance " ;
+    cin >> accountbalance; 
+
+    if ( accountbalance <= 1000)
+    {
+        balance = (accountbalance * intrest) + ( accountbalance) ;
+        cout << " balance = " << endl << balance << " total, $ " << endl << balance / 10 << " mininum payment " ; 
+    }
+    else if ( accountbalance > 1000)
+    {
+        balanceoverthousand = (1000 * 0.015 ) + ( accountbalance ) ;
+        cout << " balance = " << balanceoverthousand << " total, $ " << endl << balanceoverthousand / 10 << " mininum" "payment" ; 
+    }
+    else 
+    {
+        cout << " Invalid input " << endl ; 
+    }
+
+
+}
