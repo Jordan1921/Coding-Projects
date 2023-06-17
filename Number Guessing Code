@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+int main()
+{
+   // Declare the Variables 
+   int LuckyNumber = 17 ; 
+    int guess ; 
+    int guesscout = 0; 
+    int guesslimit = 10 ; 
+    bool outofguesses = false ;
+    int choice ;
+    // Main Menu Visuals And Options 
+    cout << " **** Welcome To The Game **** " << endl ;
+    cout << " 1. Start game " << endl ; 
+    cout << " 2. Exit game " << endl ;
+    cin >> choice ; 
+    // Start typing code 
+    switch (choice)
+    case 1:
+     srand(time(0)) ;
+     LuckyNumber = 1+ (rand() % 50 ); 
+     for(guesscout = 0 ; guesscout <= 10 ; guesscout++ ) 
+    
+    while ( LuckyNumber != guess && !outofguesses){
+        if(guesscout < guesslimit){
+       cout<< " Please enter a number : " ; 
+       cin >> guess ; 
+       guesscout++ ; }
+        else{outofguesses = true ; {
+        if(outofguesses){ cout << "YOU LOSE !!! " << endl ; }; }
+        if( guess == LuckyNumber){ cout << " YOU GOT IT !!! " << endl ; }
+        if (guess > LuckyNumber){
+           cout << " TOO HIGH ! " << endl ;}
+        if ( guess < LuckyNumber){
+            cout << " TOO LOW !" << endl ; } 
+    }
+    
+    return 0 ; 
+
+
+
+
+}
+
