@@ -1,0 +1,14 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+double windchill, velocity, temperature;
+cout << "Please enter a number for temperature : " ;
+cin >> temperature ; 
+cout << " Please enter a number for velocity : " ;
+cin >> velocity ;
+windchill = 35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * pow (velocity,0.16);
+cout << "The effective temperature is: " << windchill << endl ;
+
+return 0;
