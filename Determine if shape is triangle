@@ -1,0 +1,31 @@
+// Jordan Wise-Smith
+// CSCI 1010 Section 1 
+// Week 8 Lab 
+// A program that calcuates if it is a triangle
+#include<iostream> 
+using namespace std;
+int main() 
+{
+    
+    int a, b, c, total ;
+
+  
+   cout << " Please enter the value for three angles : " ; 
+   cin >> a >> b >> c ; // initalized the three angles and the angle total 
+
+   total = a + b + c ; // ask user to put in three angles 
+   
+    if (total > 180)
+    {
+    cout << " Its not a triangle! :" ;
+    }
+    else if ( total == 180)
+    {
+    cout << " It is a triangle " ; 
+    }
+
+    
+    return 0 ;
+
+
+}
