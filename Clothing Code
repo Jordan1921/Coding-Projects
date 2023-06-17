@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    double tshirt = 7.89 ;
+    double tshirt1, short1;
+    double shorts = 10.99  ; 
+    double total ; 
+    cout << "Enter the number of tshirt :  "; 
+    cin >> tshirt1 ;
+    cout << " Enter the number of shorts : " ;
+    cin >> short1 ; 
+    total = ((tshirt*tshirt1)+(shorts*short1)*(1+0.075)+(tshirt*tshirt1)+(shorts*short1)) ;  
+    cout << "The total price is : " << total << endl ; 
+    cout << " Thank you!" ;
+    
+    return 0 ;
+
+
+}
