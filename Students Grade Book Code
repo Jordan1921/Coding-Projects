@@ -1,0 +1,114 @@
+// Jordan Wise-Smith 
+// Project 2 
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main()
+// Building display menu
+{
+    const int MAX = 100;
+    int ID[MAX], used = 0;
+    string name[MAX];
+    int grade[MAX];
+    int number = 1;
+    char choice;
+    int sum;
+    int check, remove, highest, lowest, avg = 0;
+while(1) {
+        cout << "**** CSCI 1010 Student Information Managaement System ****\n";
+        cout << "1. Add Student\n";
+        cout << "2. Search By ID\n";
+        cout << "3. Grades Statistics\n";
+        cout << "4. Remove a students\n";
+        cout << "5. Print all students\n";
+        cout << "6. Exit the system\n";
+        cin >> choice ;
+        if(choice == '6')
+        {
+            cout << "Thank you for using the database!";
+break; }
+        switch(choice)
+        {
+<< endl;
+case '1':
+if(number > 100 )
+        {
+            cout << "The maximum number of students has been reached"
+break; }
+ID[number] = number;
+cout << "The ID number for the new student is: " << ID[number] << endl;
+cout << "Please enter the name of the student (Lastname, firstname)
+without spaces: ";
+            cin >> name[number];
+            cout << "Please enter the grade of the student: ";
+            cin >> grade[number];
+            number++;
+break;
+            case '2':
+            cout << "Please enter the ID: ";
+            cin >> check;
+
+<< endl;
+    if(check != ID[check])
+        {
+            cout << "You have entered a invalid ID, please try again" 
+        }
+else {
+}
+break;
+case '3':
+        highest = grade[1];
+        for(int i = 1; i < number - 1 ; i++)
+        {
+            if(grade[i] > highest)
+            {
+                highest = grade[i];
+            }
+        }
+        lowest = grade[1];
+        for(int i = 1; i < number ; i++)
+        {
+            if(lowest > grade[i])
+            {
+                lowest = grade[i];
+            }
+}
+         for(int i = 0; i < number; i++)
+        {
+            sum += grade[i];
+        }
+        avg = sum / number;
+        cout << "The highest grade is " << highest << endl;
+        cout << "The lowest grade is " << lowest << endl;
+        cout << "The average grade is " << avg << endl;
+            break;
+case '4':
+cout << "Enter the ID of the student: ";
+cin >> remove;
+cout << "Student " << name[remove] << " has successfully been removed
+cout << "Students ID: " << ID[check] << endl;
+cout << "Students name: " << name[check] << endl;
+cout << "Students grade: " << grade[check] << endl;
+from the student database" << endl;
+                for(int i = remove; i <= number - 1; i++)
+{
+
+<< endl;
+        name[i] = name[i+1];
+        grade[i] = grade[i+1];
+    }
+    number -= 1;
+    if(remove != ID[remove])
+        {
+            cout << "You have entered an invalid ID, please try again"
+}
+        break;
+case '5':
+} }
+return 0 ; }
+cout << "ID\t" << "Name\t\t" << "Grade" << endl;
+for(int i = 1; i < number; i++)
+{
+    cout << ID[i] << "\t" << name[i] << "\t" << grade[i] << endl;
+}
+break;
