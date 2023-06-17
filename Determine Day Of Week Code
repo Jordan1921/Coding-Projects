@@ -1,0 +1,23 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+   int month, day, years, x ;
+   cout << " Please enter a four digit number for year : " ;
+   cin >> years ;
+   cout << " Please enter a number for month, use 1 to 12 to represent Jan to Dec : " ; 
+   cin >> month ; 
+   cout << " Please enter a number for date, 1 to 31 : " ; 
+   cin >> day ;
+
+
+   years = years - (14-month)/12 ;
+   x = years + years/4 - years /100 + years /400 ; 
+   month = month + 12 * ((14-month)/12)-2 ;
+   day = ( day + x + (31 * month) / 12) % 7 ; 
+
+   cout << " The day of the week is : " << day << endl ;
+
+   return 0 ; 
+}
