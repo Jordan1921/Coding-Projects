@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std ; 
+int main ()
+{
+
+    char Player1, Player2, Choice ;
+    cout << " Welcome to rock, paper, scciors " ;
+    
+    cout << " Player 1, please type your choice :" ;
+    cin >> Player1 ; 
+    cout << " Player 2, please type your choice  " ; 
+    cin >> Player2 ;
+
+    if ((Player1 == 'P' || Player1 == 'p') && (Player2 == 'R' || Player2 == 'r'))
+    {
+        cout << " Paper covers rock, Player 1 wins! ";
+    }
+    else if ((Player1 == 'R'|| Player1 == 'r' ) && (Player2 == 'P' || Player2 == 'p'))
+    {
+        cout << "Paper covers rock, Player 2 wins! " ; 
+    }
+    else if ((Player1 == 'R' || Player1 == 'r') && (Player2 == 'S' || Player2 == 's'))
+    {
+        cout << " Rock breaks sccissors, Player 1 wins 1 " ;
+    }
+    else if ((Player1 == 'S' || Player1 == 's') && (Player2 == 'R' || Player2 == 'r'))
+    {
+        cout << " Rock breaks sccissors, Player 2 wins! " ; 
+    }
+    else if ((Player1 == 'S' || Player1 == 's') && (Player2 == 'P' || Player2 == 'p'))
+    {
+        cout << " Scissor cuts paper, Player 1 wins ! " ;
+    }
+    else if ((Player1 == 'P' || Player1 == 'p') && (Player2 == 'S' || Player2 == 's'))
+    {
+        cout << " Scissor cuts paper, Player2 wins! " ; 
+    }
+    else if (Player1 == Player2)
+    {
+        cout << "Nobody wins!" ; 
+    }
+    return 0;
+
+}
