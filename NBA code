@@ -1,0 +1,96 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class Game {
+    private String id;
+    private String name;
+    // Other game-related attributes
+    
+    public Game(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    
+    // Getters and setters
+}
+
+class Statistic {
+    private String gameId;
+    private int score;
+    // Other statistic-related attributes
+    
+    public Statistic(String gameId, int score) {
+        this.gameId = gameId;
+        this.score = score;
+    }
+    
+    // Getters and setters
+}
+
+class BasketballApp {
+    private List<Game> liveGames;
+    private List<Game> historicGames;
+    private Map<String, List<Statistic>> gameStatistics;
+    
+    public BasketballApp() {
+        liveGames = new ArrayList<>();
+        historicGames = new ArrayList<>();
+        gameStatistics = new HashMap<>();
+    }
+    
+    public void addLiveGame(Game game) {
+        liveGames.add(game);
+    }
+    
+    public void addHistoricGame(Game game) {
+        historicGames.add(game);
+    }
+    
+    public void addStatistic(Statistic statistic) {
+        String gameId = statistic.getGameId();
+        if (!gameStatistics.containsKey(gameId)) {
+            gameStatistics.put(gameId, new ArrayList<>());
+        }
+        gameStatistics.get(gameId).add(statistic);
+    }
+    
+    public List<Game> getLiveGames() {
+        return liveGames;
+    }
+    
+    public List<Game> getHistoricGames() {
+        return historicGames;
+    }
+    
+    public List<Statistic> getGameStatistics(String gameId) {
+        return gameStatistics.getOrDefault(gameId, new ArrayList<>());
+    }
+    
+    // Other methods for navigation, real-time updates, etc.
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BasketballApp basketballApp = new BasketballApp();
+        
+        // Create and add games to the app
+        Game liveGame = new Game("1", "Live Game 1");
+        basketballApp.addLiveGame(liveGame);
+        
+        Game historicGame = new Game("2", "Historic Game 1");
+        basketballApp.addHistoricGame(historicGame);
+        
+        // Add statistics to a game
+        Statistic statistic1 = new Statistic("1", 10);
+        basketballApp.addStatistic(statistic1);
+        
+        // Retrieve game information and statistics
+        List<Game> liveGames = basketballApp.getLiveGames();
+        List<Game> historicGames = basketballApp.getHistoricGames();
+        List<Statistic> gameStatistics = basketballApp.getGameStatistics("1");
+        
+        // Perform other actions and interactions with the app
+    }
+}
